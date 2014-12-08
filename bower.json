@@ -1,0 +1,29 @@
+{
+  "name": "get-currency",
+  "main": "get-currency.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/johnie/get-currency",
+  "authors": [
+    {
+      "name": "Johnie Hjelm",
+      "email": "johnie@hjelm.im",
+      "url": "http://johnie.se"
+    }
+  ],
+  "description": "Get currency symbol for a given currency code",
+  "keywords": [
+    "currency",
+    "exchange",
+    "symbols"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "cli.js",
+    "package.json"
+  ]
+}
