@@ -14,17 +14,27 @@ var currencySymbols = require('./dist/symbols.json');
 /*-------------------------------------------------------------------
   Get symbol
 -------------------------------------------------------------------*/
+(function () {
+  'use strict';
 
-function getCurrency( currencyCode ) {
+  var getCurrency = function( currencyCode ) {
 
-  if ( currencySymbols.hasOwnProperty( currencyCode ) ) {
+    if ( currencySymbols.hasOwnProperty( currencyCode ) ) {
 
-    return currencySymbols[currencyCode];
+      return currencySymbols[currencyCode];
 
+    } else {
+
+      return '?';
+
+    }
+
+  };
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = getCurrency;
   } else {
-
-    return '?';
-
+    window.getCurrency = getCurrency;
   }
 
-}
+})();
