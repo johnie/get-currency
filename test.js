@@ -7,11 +7,11 @@ var assert      = require('assert'),
     getCurrency = require('./get-currency');
 
 it('should throw on invalid input', function () {
-  assert.throws(function () { getCurrency('') });
-  assert.throws(function () { getCurrency('1') });
-  assert.throws(function () { getCurrency(NaN) });
-  assert.throws(function () { getCurrency(true) });
-});
+  assert.equal('?', getCurrency('') );
+  assert.equal('?', getCurrency(1) );
+  assert.equal('?', getCurrency(false) );
+  assert.equal('?', getCurrency(NaN) );
+  });
 
 it('should get matching symbol', function () {
   assert.equal(getCurrency('USD'), '$');
