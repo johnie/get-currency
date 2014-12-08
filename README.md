@@ -1,4 +1,4 @@
-# get-currency
+# get-currency [![Build Status](https://travis-ci.org/johnie/get-currency.svg?branch=master)](https://travis-ci.org/johnie/get-currency)
 
 > Get currency symbol for a given currency code
 
