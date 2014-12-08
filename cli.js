@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 var stdin       = require('get-stdin');
-    getCurrency = require('./get-currency'),
-    pkg         = require('./package.json'),
-    argv        = process.argv.slice(2),
-    input       = argv[0];
+var getCurrency = require('./get-currency');
+var pkg         = require('./package.json');
+var argv        = process.argv.slice(2);
+var input       = argv[0];
 
 function help() {
   console.log([
@@ -22,7 +22,7 @@ function help() {
 }
 
 function init(data) {
-  console.log(getCurrency(data));
+  console.log(getCurrency(String(data)));
 }
 
 if (argv.indexOf('--help') !== -1) {
